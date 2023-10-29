@@ -214,15 +214,15 @@ def get_readable_message():
             ChatType.SUPERGROUP, ChatType.CHANNEL] and not config_dict['DELETE_LINKS'] else ''
         elapsed = time() - download.message.date.timestamp()
         msg += f"\n<b>{escape(f'{download.name()}')}</i>\n\n" if config_dict['SAFE_MODE'] and elapsed >= config_dict['STATUS_UPDATE_INTERVAL'] else ""
-        msg += f"\n<b><code>{download.status()}</b></code>"    
+        msg += f"\n<b><code>{download.status()}</b></code>\n"    
         if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
-            msg += BotTheme('BAR', Bar=f"{get_progress_bar_string(download.progress())} {download.progress()}")
-            msg += BotTheme('PROCESSED', Processed=f"{download.processed_bytes()} of {download.size()}")            
-            msg += BotTheme('ETA', Eta=download.eta())
-            msg += BotTheme('SPEED', Speed=download.speed())
-            msg += BotTheme('ELAPSED', Elapsed=get_readable_time(elapsed))
-            msg += BotTheme('ENGINE', Engine=download.eng())
-            msg += BotTheme('STA_MODE', Mode=download.upload_details['mode'])
+            msg += f"\n\n {get_progress_bar_string(download.progress())} » {download.progress()}"
+            msg += f"\n <b>Speed:</b> <code>{download.speed()}</code>"            
+            msg += f"\n <b>Done:</b> <code>{download.processed_bytes()}</code> of <code>{download.size()}</code>"
+            msg += f"\n <b>ETA:</b> <code>{download.eta()}</code>"
+            msg += f"\n <b>Elp:</b> <code>{get_readable_time(elapsed)}</code>"
+            msg += f"\n <b>Engine:</b> <code>{download.eng}</code>"
+            msg += f"\n <b>Mode:</b> <code>{download.upload_details['mode']}</code>"            
             if hasattr(download, 'seeders_num'):
                 try:
                     msg += BotTheme('SEEDERS', Seeders=download.seeders_num())
@@ -230,17 +230,17 @@ def get_readable_message():
                 except Exception:
                     pass
         elif download.status() == MirrorStatus.STATUS_SEEDING:
-            msg += BotTheme('STATUS', Status=download.status(), Url=msg_link)
-            msg += BotTheme('SEED_SIZE', Size=download.size())
-            msg += BotTheme('SEED_SPEED', Speed=download.upload_speed())
-            msg += BotTheme('UPLOADED', Upload=download.uploaded_bytes())
-            msg += BotTheme('RATIO', Ratio=download.ratio())
-            msg += BotTheme('TIME', Time=download.seeding_time())
-            msg += BotTheme('SEED_ENGINE', Engine=download.eng())
+            msg += f"\n <b>Status:</b> {download.status()}"
+            msg += f"\n <b>Size:</b> {download.size()}"
+            msg += f"\n <b>Speed:</b> {download.upload_speed()}"
+            msg += f" | <b>Uploaded:</b> {download.uploaded_bytes()}"
+            msg += f"\n <b>Ratio:</b> {download.ratio()}"
+            msg += f" | <b>Time:</b> {download.seeding_time()}"
+            msg += f"\n <b>Engine:</b> {download.eng()}"           
         else:
-            msg += BotTheme('STATUS', Status=download.status(), Url=msg_link)
-            msg += BotTheme('STATUS_SIZE', Size=download.size())
-            msg += BotTheme('NON_ENGINE', Engine=download.eng())
+            msg += f"\n <b>Status:</b> {download.status()}"
+            msg += f"\n <b>Size:</b> {download.size()}"
+            msg += f"\n <b>Engine:</b> {download.eng()}"
 
         msg += BotTheme('USER',
                         User=download.message.from_user.mention(style="html"))
