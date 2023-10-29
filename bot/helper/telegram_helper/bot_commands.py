@@ -5,7 +5,7 @@ class _BotCommands:
     def __init__(self):
         self.StartCommand = 'start'
         self.MirrorCommand = [f'pea{CMD_SUFFIX}', f'p{CMD_SUFFIX}']
-        self.QbMirrorCommand = [f'qbmirror{CMD_SUFFIX}', f'pm{CMD_SUFFIX}']
+        self.QbMirrorCommand = [f'peaqb{CMD_SUFFIX}', f'pm{CMD_SUFFIX}']
         self.YtdlCommand = [f'peaytdl{CMD_SUFFIX}', f'py{CMD_SUFFIX}']
         self.LeechCommand = [f'leech{CMD_SUFFIX}', f'pl{CMD_SUFFIX}']
         self.QbLeechCommand = [f'peaqbleech{CMD_SUFFIX}', f'pql{CMD_SUFFIX}']
