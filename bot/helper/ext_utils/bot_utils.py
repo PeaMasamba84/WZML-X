@@ -44,17 +44,17 @@ PAGE_NO      = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING   = "Upload"
-    STATUS_DOWNLOADING = "Download"
-    STATUS_CLONING     = "Clone"
-    STATUS_QUEUEDL     = "QueueDL"
-    STATUS_QUEUEUP     = "QueueUp"
-    STATUS_PAUSED      = "Pause"
-    STATUS_ARCHIVING   = "Archive"
-    STATUS_EXTRACTING  = "Extract"
-    STATUS_SPLITTING   = "Split"
-    STATUS_CHECKING    = "CheckUp"
-    STATUS_SEEDING     = "Seed"
+    STATUS_UPLOADING    = "🆄🄿🅻🄾🄰🅳"
+    STATUS_DOWNLOADING  = "🄳🄾🆆🅽🅻🄾🄰🅳"
+    STATUS_CLONING      = "🅒🅛🅞🅝🅔"
+    STATUS_QUEUEDL      = "🅠🅤🅔🅤🅔 🅓🅝"
+    STATUS_QUEUEUP      = "🅠🅤🅔🅤🅔 🅤🅟"
+    STATUS_PAUSED       = "🅟🅐🅤🅢🅔"
+    STATUS_ARCHIVING    = "🅐🅡🅒🅗🅘🅥🅔"
+    STATUS_EXTRACTING   = "🅴🅇🅃🆁🄰🄲🆃"
+    STATUS_SPLITTING    = "🅢🅟🅛🅘🅣"
+    STATUS_CHECKING     = "🅒🅗🅔🅒🅚🅤🅟"
+    STATUS_SEEDING      = "🅢🅔🅔🅓"
 
 
 class setInterval:
@@ -120,11 +120,11 @@ def bt_selection_buttons(id_):
 
 
 async def get_telegraph_list(telegraph_content):
-    path = [(await telegraph.create_page(title=f"{config_dict['TITLE_NAME']} Drive Search", content=content))["path"] for content in telegraph_content]
+    path = [(await telegraph.create_page(title=f"{config_dict['TITLE_NAME']} Pea Masamba Drive Search", content=content))["path"] for content in telegraph_content]
     if len(path) > 1:
         await telegraph.edit_telegraph(path, telegraph_content)
     buttons = ButtonMaker()
-    buttons.ubutton("🔎 VIEW", f"https://te.legra.ph/{path[0]}")
+    buttons.ubutton("🔦 VIEW", f"https://te.legra.ph/{path[0]}")
     buttons, _ = extra_btns(buttons)
     return buttons.build_menu(1)
 
