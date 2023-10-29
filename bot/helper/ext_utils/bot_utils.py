@@ -241,9 +241,8 @@ def get_readable_message():
             msg += f"\n <b>Size:</b> {download.size()}"
             msg += f"\n <b>Engine:</b> {download.eng()}"        
         msg += f"\n<b>User: </b>{download.message.from_user.mention(style='html')} ID: </b><code>{download.message.from_user.id}</code>"        
-        if (download.eng()).startswith("qBit"):
-            msg += BotTheme('BTSEL', Btsel=f"/{BotCommands.BtSelectCommand}_{download.gid()}")
-        msg += BotTheme('CANCEL', Cancel=f"/{BotCommands.CancelMirror}_{download.gid()}")        
+        if (download.eng()).startswith("qBit"):            
+        msg += f"\n<b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>\n\n"
     
 
     if len(msg) == 0:
