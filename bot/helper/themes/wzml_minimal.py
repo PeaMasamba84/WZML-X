@@ -209,10 +209,10 @@ class WZMLStyle:
     FOOTER = '<b><i>Bot Stats</i></b>\n'
     TASKS =  '<b>Tasks:</b> {Tasks}\n'
     BOT_TASKS = '<b>Tasks:</b> {Tasks}/{Ttask} | <b>AVL:</b> {Free}\n'
-    Cpu = '<b>CPU:</b> {cpu}% | '
+    CPU = '<b>CPU:</b> {cpu}% | '
     FREE =                      '<b>F:</b> {free} [{free_p}%]'
-    Ram = '\n<b>RAM:</b> {ram}% | '
-    uptime =                     '<b>UPTIME:</b> {uptime}'
+    RAM = '\n<b>RAM:</b> {ram}% | '
+    UPTIME =                     '<b>UPTIME:</b> {uptime}'
     DL = '\n<b>DL:</b> {DL}/s | '
     UL =                        '<b>UL:</b> {UL}/s'
 
