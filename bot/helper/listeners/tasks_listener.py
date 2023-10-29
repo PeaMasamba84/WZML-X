@@ -429,9 +429,9 @@ class MirrorLeechListener:
         
         buttons = ButtonMaker()
         if self.isLeech:
-            msg += BotTheme('L_TOTAL_FILES', Files=folders)
+            msg += BotTheme('TOTAL_FILES', Files=folders)
             if mime_type != 0:
-                msg += BotTheme('L_CORRUPTED_FILES', Corrupt=mime_type)
+                msg += BotTheme('CORRUPTED_FILES', Corrupt=mime_type)
             msg += BotTheme('CC', Tag=self.tag)
             btn_added = False
 
@@ -448,10 +448,10 @@ class MirrorLeechListener:
                 btns = btn.build_menu(2)
                 buttons = btn
                 if self.isSuperGroup and not self.isPM:
-                    message += BotTheme('L_LL_MSG')
+                    message += BotTheme('LL_MSG')
                 elif self.isSuperGroup and self.isPM:
-                    message += BotTheme('L_LL_MSG')
-                    message += BotTheme('L_BOT_MSG')
+                    message += BotTheme('LL_MSG')
+                    message += BotTheme('BOT_MSG')
                     buttons.ibutton(BotTheme('CHECK_PM'), f"wzmlx {user_id} botpm", 'header')
                 if config_dict['SAFE_MODE'] and self.isSuperGroup:
                     await sendMessage(self.message, message, buttons.build_menu(2), photo=self.random_pic)
@@ -476,7 +476,7 @@ class MirrorLeechListener:
                 if fmsg != '\n':
                     if config_dict['SAFE_MODE']:
                         if self.isSuperGroup:
-                            await sendMessage(self.botpmmsg, msg + BotTheme('L_LL_MSG') + fmsg, btns, photo=self.random_pic)
+                            await sendMessage(self.botpmmsg, msg + BotTheme('LL_MSG') + fmsg, btns, photo=self.random_pic)
                         else:
                             await sendMessage(self.message, message + fmsg, buttons.build_menu(2), photo=self.random_pic)
                     else:
