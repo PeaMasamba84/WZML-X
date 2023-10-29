@@ -292,7 +292,7 @@ def get_readable_message():
         buttons.ibutton(BotTheme('NEXT'), "status nex")
     button = buttons.build_menu(3)
     msg += f"\n══❰ 𝐁𝐨𝐭 𝐌𝐢𝐫𝐫𝐨𝐫 𝐂𝐌𝐓 ❱══"
-    msg += BotTheme('CPU', cpu=cpu_percent())
+    msg += BotTheme('Cpu', cpu=cpu_percent())
     msg += BotTheme('FREE', free=get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free), free_p=round(100-disk_usage(config_dict['DOWNLOAD_DIR']).percent, 1))    
     msg += BotTheme('⧩', DL=get_readable_file_size(dl_speed))
     msg += BotTheme('◭', UL=get_readable_file_size(up_speed))
