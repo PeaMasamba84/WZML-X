@@ -222,8 +222,7 @@ def get_readable_message():
             msg += f"\n <b>ETA:</b> <code>{download.eta()}</code>"
             msg += f"\n <b>Elp:</b> <code>{get_readable_time(elapsed)}</code>"
             msg += f"\n <b>Engine:</b> <code>{download.eng()}</code>"
-            msg += f"\n <b>Mode:</b> <code>{download.upload_details['mode']}</code>"    
-            msg += f"\n<b>YUser: </b>{download.message.from_user.mention(style='html')} | <b>ID: </b><code>{download.message.from_user.id}</code>"
+            msg += f"\n <b>Mode:</b> <code>{download.upload_details['mode']}</code>"                
             if hasattr(download, 'seeders_num'):
                 try:
                     msg += f"\n <b>Seed/Leech:</b> <code>{download.seeders_num()}/{download.leechers_num()}</code>"
@@ -242,8 +241,7 @@ def get_readable_message():
             msg += f"\n <b>Size:</b> {download.size()}"
             msg += f"\n <b>Engine:</b> {download.eng()}"
             {get_readable_time(elapsed)}</code>"
-        msg += f"\n <b>By:</b> {download.message.from_user.mention(style="html")}"        
-        msg += f"\n <b>ID: {download.message.from_user.id}"         
+        msg += f"\n<b>YUser: </b>{download.message.from_user.mention(style='html')} | <b>ID: </b><code>{download.message.from_user.id}</code>"        
         if (download.eng()).startswith("qBit"):
             msg += BotTheme('BTSEL', Btsel=f"/{BotCommands.BtSelectCommand}_{download.gid()}")
         msg += f"\n<b>{theme['Stop']} </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>\n\n"
