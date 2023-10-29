@@ -21,9 +21,9 @@ For details about config you can see Here.
 Go to https://gist.github.com and paste your config data. 
 Rename the file to config.env then create secret gist. Click on Raw, copy the link. 
 This will be your CONFIG_FILE_URL. Refer to below images for clarity.
-
+```
 Or
- ```
+```
 
 BOT_TOKEN
 OWNER_ID
