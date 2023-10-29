@@ -40,7 +40,7 @@ class WZMLStyle:
     HELP_HEADER = " <b><i>Help Guide Menu!</i></b>\n\n<b>NOTE: <i>Click on any CMD to see more minor detalis.</i></b>"
 
     # async def stats(client, message):
-    BOT_STATS = ''' <b><i>BOT CMT MIRROR :</i></b>
+    BOT_STATS = ''' <b>𝐁𝐎𝐓 𝐂𝐌𝐓 𝐌𝐈𝐑𝐑𝐎𝐑 :</b>
 <b>Bot Uptime :</b> {bot_uptime}
 
 <b><i>RAM ( MEMORY ) :</i></b>
@@ -58,19 +58,19 @@ class WZMLStyle:
 <b>U :</b> {disk_u} | <b>F :</b> {disk_f} | <b>T :</b> {disk_t}
     
     '''
-    SYS_STATS = ''' <b><i>OS SYSTEM :</i></b>
+    SYS_STATS = ''' <b>𝐎𝐒 𝐒𝐘𝐒𝐓𝐄𝐌 :</b>
 <b>OS Uptime :</b> {os_uptime}
 <b>OS Version :</b> {os_version}
 <b>OS Arch :</b> {os_arch}
 
-<b><i>NETWORK STATS :</i></b>
+<b>𝐍𝐄𝐓𝐖𝐎𝐑𝐊 𝐒𝐓𝐀𝐓𝐒 :</b>
 <b>Upload Data:</b> {up_data}
 <b>Download Data:</b> {dl_data}
 <b>Pkts Sent:</b> {pkt_sent}k
 <b>Pkts Received:</b> {pkt_recv}k
 <b>Total I/O Data:</b> {tl_data}
 
-<b>CPU :</b>
+<b>𝐂𝐏𝐔 :</b>
 {cpu_bar} {cpu}%
 <b>CPU Frequency :</b> {cpu_freq}
 <b>System Avg Load :</b> {sys_load}
@@ -78,7 +78,7 @@ class WZMLStyle:
 <b>Total Core(s) :</b> {total_core}
 <b>Usable CPU(s) :</b> {cpu_use}
     '''
-    REPO_STATS = ''' <b><i>REPO CMT :</i></b>
+    REPO_STATS = ''' <b><i>𝐑𝐄𝐏𝐎 𝐂𝐌𝐓 :</i></b>
 <b>Bot Updated :</b> {last_commit}
 <b>Current Version :</b> {bot_version}
 <b>Latest Version :</b> {lat_version}
@@ -86,7 +86,7 @@ class WZMLStyle:
 
 <b>REMARKS :</b> <code>{remarks}</code>
     '''
-    BOT_LIMITS = ''' <b><i>BOT LIMITATIONS :</i></b>
+    BOT_LIMITS = ''' <b>𝐁𝐎𝐓 𝐋𝐈𝐌𝐈𝐓𝐀𝐓𝐈𝐎𝐍𝐒 :</b>
 <b>Direct Limit :</b> {DL} GB
 <b>Torrent Limit :</b> {TL} GB
 <b>GDrive Limit :</b> {GL} GB
@@ -104,16 +104,16 @@ class WZMLStyle:
     # ---------------------
 
     # async def restart(client, message): ---> __main__.py
-    RESTARTING = '<i>Restarting...</i>'
+    RESTARTING = '<i>𝑹𝒆𝒔𝒕𝒂𝒓𝒕𝒊𝒏𝒈...</i>'
     # ---------------------
 
     # async def restart_notification(): ---> __main__.py
-    RESTART_SUCCESS = ''' <b><i>Restarted Successfully!</i></b>
+    RESTART_SUCCESS = ''' <b><i>𝗥𝗲𝘀𝘁𝗮𝗿𝘁𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆</i></b>
 <b>Date:</b> {date}
 <b>Time:</b> {time}
 <b>TimeZone:</b> {timz}
 <b>Version:</b> {version}'''
-    RESTARTED = ''' <b><i>Bot Restarted!</i></b>'''
+    RESTARTED = ''' <b>𝑩𝒐𝒕 𝑹𝒆𝒔𝒕𝒂𝒓𝒕𝒆𝒅</b>'''
     # ---------------------
 
     # async def ping(client, message): ---> __main__.py
@@ -122,7 +122,7 @@ class WZMLStyle:
     # ---------------------
 
     # async def onDownloadStart(self): --> tasks_listener.py
-    LINKS_START = """<b><i>Task Started</i></b>
+    LINKS_START = """<b>Task Started</b>
 <b>Mode:</b> {Mode}
 <b>By:</b> {Tag}\n\n"""
     LINKS_SOURCE = """ <b>Source:</b>
