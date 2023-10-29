@@ -1,6 +1,3 @@
-
-```
-- **Sample config.env** _(Copy these and Paste in Editor and Fill Up)_
   ```
   BOT_TOKEN = ""
   TELEGRAM_API = ""
