@@ -132,11 +132,11 @@ class WZMLStyle:
 ------------------------------------------\n\n"""
     
     # async def __msg_to_reply(self): ---> pyrogramEngine.py
-    PM_START =            "<b><u>Task Started :</u></b>\n┃\n<b>Link:</b> <a href='{msg_link}'>Click Here</a>"
-    LOG_START =           "<b><u>Leech Started :</u></b>\n┃\n<b>User :</b> {mention} ( #ID{uid} )\n<b>Source :</b> <a href='{msg_link}'>Click Here</a>"
+    PM_START =            "<b><u>Task Started :</u></b>\n\n<b>Link:</b> <a href='{msg_link}'>Click Here</a>"
+    LOG_START =           "<b><u>Leech Started :</u></b>\n\n<b>User :</b> {mention} ( #ID{uid} )\n<b>Source :</b> <a href='{msg_link}'>Click Here</a>"
 
     # async def onUploadComplete(): ---> tasks_listener.py
-    NAME =                  '<b><i>{Name}</i></b>\n┃\n'
+    NAME =                  '<b><i>{Name}</i></b>\n\n'
     SIZE =                  '<b>Size: </b>{Size}\n'
     ELAPSE =                '<b>Elapsed: </b>{Time}\n'
     MODE =                  '<b>Mode: </b>{Mode}\n'
@@ -228,7 +228,7 @@ class WZMLStyle:
 
     # async def countNode(_, message): ----> gd_count.py
     COUNT_MSG = '<b>Counting:</b> <code>{LINK}</code>'
-    COUNT_NAME = '<b><i>{COUNT_NAME}</i></b>\n┃\n'
+    COUNT_NAME = '<b><i>{COUNT_NAME}</i></b>\n\n'
     COUNT_SIZE = '<b>Size: </b>{COUNT_SIZE}\n'
     COUNT_TYPE = '<b>Type: </b>{COUNT_TYPE}\n'
     COUNT_SUB =  '<b>SubFolders: </b>{COUNT_SUB}\n'
