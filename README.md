@@ -4,7 +4,7 @@
   TELEGRAM_HASH = ""
   OWNER_ID = ""
   UPSTREAM_REPO = ""
-  UPSTREAM_BRANCH = "hk_wzmlx"
+  UPSTREAM_BRANCH = "main"
   DATABASE_URL = ""
   BASE_URL = ""
   TORRENT_TIMEOUT = "0"
