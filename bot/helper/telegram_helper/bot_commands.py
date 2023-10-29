@@ -7,7 +7,7 @@ class _BotCommands:
         self.MirrorCommand = [f'pea{CMD_SUFFIX}', f'p{CMD_SUFFIX}']
         self.QbMirrorCommand = [f'peaqb{CMD_SUFFIX}', f'pm{CMD_SUFFIX}']
         self.YtdlCommand = [f'peaytdl{CMD_SUFFIX}', f'py{CMD_SUFFIX}']
-        self.LeechCommand = [f'leech{CMD_SUFFIX}', f'pl{CMD_SUFFIX}']
+        self.LeechCommand = [f'pealeech{CMD_SUFFIX}', f'pl{CMD_SUFFIX}']
         self.QbLeechCommand = [f'peaqbleech{CMD_SUFFIX}', f'pql{CMD_SUFFIX}']
         self.YtdlLeechCommand = [f'peaytdlleech{CMD_SUFFIX}', f'pyl{CMD_SUFFIX}']
         if config_dict['SHOW_EXTRA_CMDS']:
