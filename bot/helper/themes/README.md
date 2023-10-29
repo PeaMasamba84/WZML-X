@@ -5,7 +5,7 @@
 
 ### ***Requirements :***
 1. A Local Editor or Use [github.dev](https://github.dev)
-2. **Sample File :** Check [peamasamba_minimal.py](https://github.com/weebzone/WZML-X/blob/master/bot/helper/themes/wzml_minimal.py)
+2. **Sample File :** Check [peamasamba_minimal.py](https://github.com/PeaMasamba84/WZML-X/blob/main/bot/helper/themes/peamasamba_minimal.py)
 
 ---
 
