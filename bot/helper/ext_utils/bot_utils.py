@@ -505,7 +505,7 @@ async def get_stats(event, key="home"):
         btns.ibutton('OS Stats', f'wzmlx {user_id} stats stsys')
         btns.ibutton('Repo Stats', f'wzmlx {user_id} stats strepo')
         btns.ibutton('Bot Limits', f'wzmlx {user_id} stats botlimits')
-        msg = "⌬ <b><i>Bot & OS Statistics!</i></b>"
+        msg = "<b><i>Bot or OS Statistics!</i></b>"
     elif key == "stbot":
         total, used, free, disk = disk_usage('/')
         swap = swap_memory()
