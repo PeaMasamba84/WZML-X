@@ -221,7 +221,7 @@ def get_readable_message():
             msg += f"\n <b>Done:</b> <code>{download.processed_bytes()}</code> of <code>{download.size()}</code>"
             msg += f"\n <b>ETA:</b> <code>{download.eta()}</code>"
             msg += f"\n <b>Elp:</b> <code>{get_readable_time(elapsed)}</code>"
-            msg += f"\n <b>Engine:</b> <code>{download.engine}</code>"
+            msg += f"\n <b>Engine:</b> <code>{download.eng}</code>"
             msg += f"\n <b>Mode:</b> <code>{download.upload_details['mode']}</code>"            
             if hasattr(download, 'seeders_num'):
                 try:
@@ -235,11 +235,11 @@ def get_readable_message():
             msg += f" | <b>Uploaded:</b> {download.uploaded_bytes()}"
             msg += f"\n <b>Ratio:</b> {download.ratio()}"
             msg += f" | <b>Time:</b> {download.seeding_time()}"
-            msg += f"\n <b>Engine:</b> {download.engine()}"           
+            msg += f"\n <b>Engine:</b> {download.eng()}"           
         else:
             msg += f"\n <b>Status:</b> {download.status()}"
             msg += f"\n <b>Size:</b> {download.size()}"
-            msg += f"\n <b>Engine:</b> {download.engine()}"
+            msg += f"\n <b>Engine:</b> {download.eng()}"
 
         msg += BotTheme('USER',
                         User=download.message.from_user.mention(style="html"))
