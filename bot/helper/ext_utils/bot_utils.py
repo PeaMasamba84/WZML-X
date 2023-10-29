@@ -242,7 +242,7 @@ def get_readable_message():
             msg += f"\n <b>Engine:</b> {download.eng()}"        
         msg += f"\n<b>User: </b>{download.message.from_user.mention(style='html')} ID: </b><code>{download.message.from_user.id}</code>"        
         if (download.eng()).startswith("qBit"):            
-        msg += f"\n/stop_{download.gid()[:8]}\n\n"
+        msg += f"\n/{BotCommands.CancelMirror}_{download.gid()}"     
     
     if len(msg) == 0:
         return None, None
