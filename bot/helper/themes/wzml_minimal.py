@@ -205,8 +205,7 @@ class WZMLStyle:
     BTSEL =          '\n<b>Select:</b> {Btsel}'
     CANCEL =         '\n{Cancel}'
 
-    ####------FOOTER--------
-    FOOTER = '<b><i>Bot Stats</i></b>\n'
+    ####------FOOTER--------    
     TASKS =  '<b>Tasks:</b> {Tasks}\n'
     BOT_TASKS = '<b>Tasks:</b> {Tasks}/{Ttask} | <b>AVL:</b> {Free}\n'
     CPU = '\n<b>CPU:</b> {cpu}% | '
