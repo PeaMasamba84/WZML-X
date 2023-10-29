@@ -432,7 +432,7 @@ class MirrorLeechListener:
             msg += BotTheme('L_TOTAL_FILES', Files=folders)
             if mime_type != 0:
                 msg += BotTheme('L_CORRUPTED_FILES', Corrupt=mime_type)
-            msg += BotTheme('L_CC', Tag=self.tag)
+            msg += BotTheme('CC', Tag=self.tag)
             btn_added = False
 
             if not files:
@@ -462,7 +462,7 @@ class MirrorLeechListener:
                             
                         if config_dict['SAFE_MODE']:
                             if self.isSuperGroup:
-                                await sendMessage(self.botpmmsg, msg + BotTheme('L_LL_MSG') + fmsg, btns, photo=self.random_pic)
+                                await sendMessage(self.botpmmsg, msg + BotTheme('LL_MSG') + fmsg, btns, photo=self.random_pic)
                             else:
                                 await sendMessage(self.message, message + fmsg, buttons.build_menu(2), photo=self.random_pic)
                         else:
