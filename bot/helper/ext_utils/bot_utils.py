@@ -244,6 +244,8 @@ def get_readable_message():
         if (download.eng()).startswith("qBit"):
             msg += BotTheme('BTSEL', Btsel=f"/{BotCommands.BtSelectCommand}_{download.gid()}")
         msg += BotTheme('CANCEL', Cancel=f"/{BotCommands.CancelMirror}_{download.gid()}")
+        msg += f"\n<b>▬▬▬▬▬▬▬▬▬▬▬▬▬</b>"
+        msg += "\n\n"
 
     if len(msg) == 0:
         return None, None
@@ -289,12 +291,11 @@ def get_readable_message():
         buttons.ibutton(BotTheme('REFRESH', Page=f"{PAGE_NO}/{PAGES}"), "status ref")
         buttons.ibutton(BotTheme('NEXT'), "status nex")
     button = buttons.build_menu(3)
-    msg += BotTheme('Cpu', cpu=cpu_percent())
-    msg += BotTheme('FREE', free=get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free), free_p=round(100-disk_usage(config_dict['DOWNLOAD_DIR']).percent, 1))
-    msg += BotTheme('Ram', ram=virtual_memory().percent)
-    msg += BotTheme('uptime', uptime=get_readable_time(time() - botStartTime))
-    msg += BotTheme('DL', DL=get_readable_file_size(dl_speed))
-    msg += BotTheme('UL', UL=get_readable_file_size(up_speed))
+    msg += f"\n══❰ 𝐁𝐨𝐭 𝐌𝐢𝐫𝐫𝐨𝐫 𝐂𝐌𝐓 ❱══"
+    msg += BotTheme('CPU', cpu=cpu_percent())
+    msg += BotTheme('FREE', free=get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free), free_p=round(100-disk_usage(config_dict['DOWNLOAD_DIR']).percent, 1))    
+    msg += BotTheme('⧩', DL=get_readable_file_size(dl_speed))
+    msg += BotTheme('◭', UL=get_readable_file_size(up_speed))
     return msg, button
 
 
