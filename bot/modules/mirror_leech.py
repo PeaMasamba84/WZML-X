@@ -451,7 +451,7 @@ async def wzmlxcb(_, query):
             buttons.ibutton('Mics', f'wzmlx {user_id} guide miscs')
             buttons.ibutton('Owner & Sudos', f'wzmlx {user_id} guide admin')
             buttons.ibutton('Close', f'wzmlx {user_id} close')
-            await editMessage(message, "㊂ <b><i>Help Guide Menu!</i></b>\n\n<b>NOTE: <i>Click on any CMD to see more minor detalis.</i></b>", buttons.build_menu(2))
+            await editMessage(message, "<b><i>Help Guide Menu!</i></b>\n\n<b>NOTE: <i>Click on any CMD to see more minor detalis.</i></b>", buttons.build_menu(2))
         await query.answer()
     elif data[2] == "stats":
         msg, btn = await get_stats(query, data[3])
