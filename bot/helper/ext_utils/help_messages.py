@@ -318,7 +318,7 @@ But you can always use -c or -category with to select category before download s
 <b>NOTE:</b> drive_id must be folder id or folder link and index must be url else it will not accept.
 """
 
-help_string = [f'''⌬ <b><i>Basic Commands!</i></b>
+help_string = [f'''<b><i>Basic Commands!</i></b>
 
 <b>Use Mirror commands to download your link/file/rcl</b>
 /{BotCommands.MirrorCommand[0]} or /{BotCommands.MirrorCommand[1]}: Download via file/url/media to Upload to Cloud Drive.
@@ -344,7 +344,7 @@ help_string = [f'''⌬ <b><i>Basic Commands!</i></b>
 <b>Cancel Tasks:</b>
 /{BotCommands.CancelMirror}: Cancel task by cancel_gid or reply.''',
 
-f'''⌬ <b><i>Users Commands!</i></b>
+f'''<b><i>Users Commands!</i></b>
 
 <b>Bot Settings:</b>
 /{BotCommands.UserSetCommand[0]} or /{BotCommands.UserSetCommand[1]} [query]: Open User Settings (PM also)
@@ -360,7 +360,7 @@ f'''⌬ <b><i>Users Commands!</i></b>
 <b>RSS Feed:</b>
 /{BotCommands.RssCommand}: Open RSS Menu (Sub/Unsub/Start/Pause)''',
 
-f'''⌬ <b><i>Owner or Sudos Commands!</i></b>
+f'''<b><i>Owner or Sudos Commands!</i></b>
 
 <b>Bot Settings:</b>
 /{BotCommands.BotSetCommand[0]} or /{BotCommands.BotSetCommand[1]} [query]: Open Bot Settings (Only Owner & Sudo).
@@ -402,7 +402,7 @@ f'''⌬ <b><i>Owner or Sudos Commands!</i></b>
 /{BotCommands.AddImageCommand} [url/photo]: Add Images in Bot
 /{BotCommands.ImagesCommand}: Generate grid of Stored Images.''',
 
-f'''⌬ <b><i>Miscellaneous Commands!</i></b>
+f'''<b><i>Miscellaneous Commands!</i></b>
 
 <b>Extras:</b>
 /{BotCommands.SpeedCommand[0]} or /{BotCommands.SpeedCommand[1]}: Check Speed in VPS/Server.
