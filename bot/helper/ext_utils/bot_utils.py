@@ -215,8 +215,8 @@ def get_readable_message():
         elapsed = time() - download.message.date.timestamp()
         msg += BotTheme('STATUS_NAME', Name="Task is being Processed!" if config_dict['SAFE_MODE'] and elapsed >= config_dict['STATUS_UPDATE_INTERVAL'] else escape(f'{download.name()}'))            
         if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
-            msg += f"\n<b><code>{download.status()}</b></code>\n"
-            msg += f"\n\n{get_progress_bar_string(download.progress())} » {download.progress()}"
+            msg += f"\n\n<b><code>{download.status()}</b></code>\n"
+            msg += f"\n{get_progress_bar_string(download.progress())} » {download.progress()}"
             msg += f"\n<b>Speed:</b> <code>{download.speed()}</code>"            
             msg += f"\n<b>Done:</b> <code>{download.processed_bytes()}</code> of <code>{download.size()}</code>"
             msg += f"\n<b>ETA:</b> <code>{download.eta()}</code>"
