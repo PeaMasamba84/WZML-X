@@ -244,7 +244,6 @@ def get_readable_message():
         if (download.eng()).startswith("qBit"):            
         msg += f"\n<b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>\n\n"
     
-
     if len(msg) == 0:
         return None, None
 
