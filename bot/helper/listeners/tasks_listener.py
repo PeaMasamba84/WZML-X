@@ -546,7 +546,7 @@ class MirrorLeechListener:
                     _btns = ButtonMaker()
                     if config_dict['SAVE_MSG']:
                         _btns.ibutton(BotTheme('SAVE_MSG'), 'save', 'footer')
-                    await editMessage(self.linkslogmsg, (msg + BotTheme('LINKS_SOURCE', On=dispTime, Source=self.source_msg) + BotTheme('L_LL_MSG') + f"\n\n<a href='{log_msg.link}'>{escape(name)}</a>\n"), _btns.build_menu(1))
+                    await editMessage(self.linkslogmsg, (msg + BotTheme('LINKS_SOURCE', On=dispTime, Source=self.source_msg) + BotTheme('LL_MSG') + f"\n\n<a href='{log_msg.link}'>{escape(name)}</a>\n"), _btns.build_menu(1))
             
             # <Section : MESSAGE LOGS>
             if self.isPM and self.isSuperGroup:
