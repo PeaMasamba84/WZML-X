@@ -221,7 +221,7 @@ def get_readable_message():
             msg += f"\n <b>Done:</b> <code>{download.processed_bytes()}</code> of <code>{download.size()}</code>"
             msg += f"\n <b>ETA:</b> <code>{download.eta()}</code>"
             msg += f"\n <b>Elp:</b> <code>{get_readable_time(elapsed)}</code>"
-            msg += f"\n <b>Engine: {download.eng}"
+            msg += f"\n <b>Engine:</b> <code>{download.eng()}</code>"
             msg += f"\n <b>Mode:</b> <code>{download.upload_details['mode']}</code>"            
             if hasattr(download, 'seeders_num'):
                 try:
@@ -241,7 +241,7 @@ def get_readable_message():
             msg += f"\n <b>Size:</b> {download.size()}"
             msg += f"\n <b>Engine:</b> {download.eng()}"
             
-        msg += f"\n <b>By:</b> <code>{tag}</code>"        
+        msg += f"\n <b>By:</b> {download.message.from_user.mention(style="html")}"        
         msg += f"\n <b>ID: {download.message.from_user.id}"         
         if (download.eng()).startswith("qBit"):
             msg += BotTheme('BTSEL', Btsel=f"/{BotCommands.BtSelectCommand}_{download.gid()}")
