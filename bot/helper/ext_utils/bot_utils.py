@@ -240,7 +240,7 @@ def get_readable_message():
             msg += f"\n<b>Status:</b> {download.status()}"
             msg += f"\n<b>Size:</b> {download.size()}"
             msg += f"\n<b>Engine:</b> {download.eng()}"        
-        msg += f"\n<b>User:</b>{download.message.from_user.mention(style='html')} ID: </b><code>{download.message.from_user.id}</code>"        
+        msg += f"\n<b>User:</b> {download.message.from_user.mention(style='html')} ID: </b><code>{download.message.from_user.id}</code>"        
         if (download.eng()).startswith("qBit"):
             msg += BotTheme('CANCEL', Cancel=f"/{BotCommands.CancelMirror}_{download.gid()}")
         msg += f"\n<b>▬▬▬▬▬▬▬▬▬▬▬▬▬</b>"
