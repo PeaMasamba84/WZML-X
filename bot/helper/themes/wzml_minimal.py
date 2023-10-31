@@ -201,9 +201,8 @@ class PEAMASAMBAStyle:
 
     ####--------OVERALL MSG FOOTER----------
     USER =              '\n<b>User:</b> <code>{User}</code> | '
-    ID =                                                        '<b>ID:</b> <code>{Id}</code>'
-    BTSEL =          '\n<b>Select:</b> {Btsel}'
-    CANCEL =         '\n<b>Select:</b> {Cancel}'
+    ID =                                                        '<b>ID:</b> <code>{Id}</code>'   
+    CANCEL =         '\n<b>Stop:</b> {Cancel}'
 
     ####------FOOTER--------    
     FOOTER = ''
