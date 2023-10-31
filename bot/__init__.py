@@ -511,7 +511,7 @@ if len(COVER_IMAGE) == 0:
 
 GD_INFO = environ.get('GD_INFO', '')
 if len(GD_INFO) == 0:
-    GD_INFO = 'Uploaded by WZML-X'
+    GD_INFO = 'Cloud by Pea Masamba'
 
 SAVE_MSG = environ.get('SAVE_MSG', '')
 SAVE_MSG = SAVE_MSG.lower() == 'true'
