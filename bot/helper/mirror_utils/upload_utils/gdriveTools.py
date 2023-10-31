@@ -599,7 +599,7 @@ class GoogleDriveHelper:
                 else:
                     continue
             if not Title:
-                msg += f'<h4>📌 Drive Query : {fileName}</h4>'
+                msg += f'<h4>Drive Query : {fileName}</h4>'
                 Title = True
             if drive_name:
                 msg += f"<aside>╾──────────────────────╼</aside><br><aside><b>#{no} {drive_name} Drive</b></aside><br><aside>╾──────────────────────╼</aside><br>"
@@ -609,10 +609,10 @@ class GoogleDriveHelper:
                 msg += "<li>"
                 if mime_type == "application/vnd.google-apps.folder":
                     furl = f"https://drive.google.com/drive/folders/{file.get('id')}"
-                    msg += f"📁 <code>{file.get('name')}<br>(folder)</code><br>"
+                    msg += f"<code>{file.get('name')}<br>(folder)</code><br>"
                     drive_link = False
                     if userId == OWNER_ID or not config_dict['DISABLE_DRIVE_LINK']:
-                        msg += f"<b>🗃 <a href={furl}>Drive Link</a></b>"
+                        msg += f"<b><a href={furl}>Drive Link</a></b>"
                         drive_link = True
                     if index_url:
                         if drive_link:
@@ -623,17 +623,17 @@ class GoogleDriveHelper:
                         else:
                             url_path = rquote(f'{file.get("name")}', safe='')
                         url = f'{index_url}/{url_path}/'
-                        msg += f' <b>⚡️ <a href="{url}">Index Link</a></b>'
+                        msg += f' <b><a href="{url}">Index Link</a></b>'
                 elif mime_type == 'application/vnd.google-apps.shortcut':
                     furl = f"https://drive.google.com/drive/folders/{file.get('id')}"
                     msg += f"⁍<a href='https://drive.google.com/drive/folders/{file.get('id')}'>{file.get('name')}" \
                         f"</a> (shortcut)"
                 else:
                     furl = f"https://drive.google.com/uc?id={file.get('id')}&export=download"
-                    msg += f"📄 <code>{file.get('name')}<br>({get_readable_file_size(int(file.get('size', 0)))})</code><br>"
+                    msg += f"<code>{file.get('name')}<br>({get_readable_file_size(int(file.get('size', 0)))})</code><br>"
                     drive_link = False
                     if userId == OWNER_ID or not config_dict['DISABLE_DRIVE_LINK']:
-                        msg += f"<b>🗃 <a href={furl}>Drive Link</a></b>"
+                        msg += f"<b><a href={furl}>Drive Link</a></b>"
                         drive_link = True
                     if index_url:
                         if drive_link:
@@ -643,10 +643,10 @@ class GoogleDriveHelper:
                         else:
                             url_path = rquote(f'{file.get("name")}')
                         url = f'{index_url}/{url_path}'
-                        msg += f' <b>⚡️ <a href="{url}">Index Link</a></b>'
+                        msg += f' <b><a href="{url}">Index Link</a></b>'
                         if mime_type.startswith(('image', 'video', 'audio')):
                             urlv = f'{index_url}/{url_path}?a=view'
-                            msg += f' <b>| 🔍 <a href="{urlv}">View Link</a></b>'
+                            msg += f' <b>| <a href="{urlv}">View Link</a></b>'
                 msg += '</li><br><br>'
                 contents_no += 1
                 if len(msg.encode('utf-8')) > 39000:
