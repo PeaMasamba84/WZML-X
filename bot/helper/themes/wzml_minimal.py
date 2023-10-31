@@ -203,7 +203,7 @@ class PEAMASAMBAStyle:
     USER =              '\n<b>User:</b> <code>{User}</code> | '
     ID =                                                        '<b>ID:</b> <code>{Id}</code>'
     BTSEL =          '\n<b>Select:</b> {Btsel}'
-    CANCEL =         '\n{Cancel}'
+    CANCEL =         '\n<b>Select:</b> {Cancel}'
 
     ####------FOOTER--------    
     FOOTER = ''
