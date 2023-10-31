@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-class PEAMASAMBAStyle:
+class WZMLStyle:
     # ----------------------
     # async def start(client, message) ---> __main__.py
     ST_BN1_NAME = 'Subtitle'
