@@ -120,7 +120,7 @@ def bt_selection_buttons(id_):
 
 
 async def get_telegraph_list(telegraph_content):
-    path = [(await telegraph.create_page(title=f"{config_dict['TITLE_NAME']} Pea Masamba Drive Search", content=content))["path"] for content in telegraph_content]
+    path = [(await telegraph.create_page(title=f"{config_dict['TITLE_NAME']} Drive Search", content=content))["path"] for content in telegraph_content]
     if len(path) > 1:
         await telegraph.edit_telegraph(path, telegraph_content)
     buttons = ButtonMaker()
@@ -242,7 +242,8 @@ def get_readable_message():
             msg += f"\n<b>Engine:</b> {download.eng()}"        
         msg += f"\n<b>User:</b> {download.message.from_user.mention(style='html')} ID: </b><code>{download.message.from_user.id}</code>"        
         if (download.eng()).startswith("qBit"):
-            msg += BotTheme('CANCEL', Cancel=f"/{BotCommands.CancelMirror}_{download.gid()}")
+            
+        msg += BotTheme('CANCEL', Cancel=f"/{BotCommands.CancelMirror}_{download.gid()}")
         msg += f"\n<b>▬▬▬▬▬▬▬▬▬▬▬▬▬</b>"
         msg += "\n\n"
 
