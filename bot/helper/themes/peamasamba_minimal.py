@@ -173,7 +173,7 @@ class PEAMASAMBAStyle:
 
     # def get_readable_message(): ---> bot_utilis.py
     ####--------OVERALL MSG HEADER----------
-    STATUS_NAME =       '<b><i>{Name}</i></b>'
+    STATUS_NAME =       '<blockquote><b><i>{Name}</i></b></blockquote>'
 
     #####---------PROGRESSIVE STATUS-------
     BAR =               '\n{Bar}'
