@@ -131,7 +131,7 @@ class MirrorLeechListener:
                     else:
                         name += ('&' if amper else '') + check.replace('dn=', '').replace('+', ' ')
                         amper = True
-                self.source_msg = f"<b>Name:</b> <i>{name}</i>\n<b>Magnet Hash:</b> <code>{hashh}</code>\n<b>Total Trackers:</b> {tracCount} \n<b>Share:</b> <a href='https://t.me/share/url?url={quote(msg)}'>Share To Telegram</a>"
+                self.source_msg = f"<b>Name:<blockquote></b> <i>{name}</i>\n<b>Magnet Hash:</b> <code>{hashh}</code>\n<b>Total Trackers:</b> {tracCount} \n<b>Share:</b> <a href='https://t.me/share/url?url={quote(msg)}'>Share To Telegram</a><blockquote>"
             else:
                 self.source_msg = f"<code>{msg}</code>"
         else:
