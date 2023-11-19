@@ -120,7 +120,7 @@ def direct_link_generator(link):
         return debrid_link(link)
     elif config_dict['REAL_DEBRID_API'] and any(x in domain for x in debrid_sites):
         return real_debrid(link)
-    elif any(x in domain for x in ['filelions.com', 'filelions.live', 'filelions.to', 'filelions.online']):
+    elif any(x in domain for x in ['filelions.co', 'filelions.site', 'filelions.live', 'filelions.to', 'cabecabean.lol', 'filelions.online']):
         return filelions(link)
     elif 'mediafire.com' in domain:
         return mediafire(link)
@@ -1208,7 +1208,7 @@ def easyupload(url):
 
 def filelions(url):
     if not config_dict['FILELION_API']:
-        raise DirectDownloadLinkException('ERROR: FILELION_API is not provided get it from https://filelions.com/?op=my_account')
+        raise DirectDownloadLinkException('ERROR: FILELION_API is not provided get it from https://filelions.co/?op=my_account')
     file_code = url.split('/')[-1]
     quality = ''
     if bool(file_code.endswith(('_o', '_h', '_n', '_l'))):
@@ -1219,7 +1219,7 @@ def filelions(url):
     url = f'{parsed_url.scheme}://{parsed_url.hostname}/{file_code}'
     with Session() as session:
         try:
-            _res = session.get('https://api.filelions.com/api/file/direct_link', params={'key': config_dict['FILELION_API'], 'file_code': file_code, 'hls': '1'}).json()
+            _res = session.get('https://api.filelions.co/api/file/direct_link', params={'key': config_dict['FILELION_API'], 'file_code': file_code, 'hls': '1'}).json()
         except Exception as e:
             raise DirectDownloadLinkException(f'ERROR: {e.__class__.__name__}') from e
     if _res['status'] != 200:
